@@ -31,13 +31,13 @@ def gen_report(df):
     # print("TEXT: \n" + 'Total number of people: ', len(df) + '\n' + 'Average age of people: ', df['age'].mean() + '\n' + 'Most common diseases:' + df['disease'].value_counts().head(3)) + '\n' + 'Most common ethinicities:' + df['ancestry'].value_counts().head(3)) + '\n' + 'Most common symptoms:' + df['symptom'].value_counts().head(3)) + '\n' + 'Gender distribution'), print(df['gender'].value_counts() + '\n' + 'Most common previous diseases'), print(df['prev_disease'].value_counts().head(3))
     # report = ("TEXT: \n" + 'Total number of people: ', str(len(df)) + '\n' + 'Average age of people: ', str(df['age'].mean()) + '\n' + 'Most common diseases:' + str(df['disease'].value_counts().head(3))) + '\n' + 'Most common ethinicities:' + str(df['ancestry'].value_counts().head(3)) + '\n' + str('Most common symptoms:' + df['symptom'].value_counts().head(3)) + '\n' + 'Gender distribution' + str(df['gender'].value_counts()) + '\n' + 'Most common previous diseases' + str(df['prev_disease'].value_counts().head(3))
     report = ''
-    report.append(str('Total number of people: ', len(df)))
-    report.append(str('Average age of people: ', df['age'].mean()))
-    report.append(str('Most common diseases:'), print(df['disease'].value_counts().head(3)))
-    report.append(str('Most common ethinicities:'), print(df['ancestry'].value_counts().head(3)))
-    report.append(str('Most common symptoms:'), print(df['symptom'].value_counts().head(3)))
-    report.append(str('Gender distribution'), print(df['gender'].value_counts()))
-    report.append(str('Most common previous diseases'), print(df['prev_disease'].value_counts().head(3)))
+    report + ('Total number of people: ' + str(len(df)))
+    report + ('Average age of people: ' + str(df['age'].mean()))
+    report + ('Most common diseases:') + str(df['disease'].value_counts().head(3))
+    report + ('Most common ethinicities:') + str(df['ancestry'].value_counts().head(3))
+    report + ('Most common symptoms:') + str(df['symptom'].value_counts().head(3))
+    report + ('Gender distribution') + str(['gender'].value_counts())
+    report + ('Most common previous diseases') + str(df['prev_disease'].value_counts().head(3))
 
     # print("PLOTS: ")
     # plt.subplot(2, 2, 1)
@@ -81,7 +81,8 @@ def submit():
 
 @app.route("/analysis", methods=['GET'])
 def analysis():
-    report = gen_report(pd.read_json('sample.json'))
+    report_df = gen_report(pd.read_json('sample.json'))
+    report = gen_report(report_df)
     return(report)
 
 
