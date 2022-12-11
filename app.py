@@ -1,10 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-# import flask
-from flask import Flask, request, jsonify, render_template
+import json
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 
 app = Flask(__name__)
 
+old_data = []
 
 
 def update_data(df, col, val, sign):
@@ -59,8 +60,25 @@ def gen_report(df):
     
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template('index.html')
+
+@app.route("/submit", methods=['POST'])
+def submit():
+    form_data = request.form.to_dict(flat=False)
+    email = request.form['email']
+    old_data.append(form_data)
+    jsonStr = json.dumps(old_data)
+    print(jsonStr)
+
+    # Writing to sample.json
+    with open("sample.json", "w") as outfile:
+        outfile.write(jsonStr)
+
+    return ("Success", 200)
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
