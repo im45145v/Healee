@@ -1347,6 +1347,19 @@ section {
   background: #ffcd6b;
 }
 
+.analysis button {
+  background: #ffc451;
+  border: 0;
+  padding: 10px 24px;
+  color: #151515;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.analysis button:hover {
+  background: #ffcd6b;
+}
+
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);

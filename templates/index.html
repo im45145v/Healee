@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon-32x32.png') }}" rel="icon">
   <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -30,7 +30,7 @@
 </head>
 
 <body>
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
@@ -43,10 +43,10 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Try it out</a></li>
+          <li><a class="nav-link scrollto" href="#analysis">Analyze</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -106,21 +106,22 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="80">
-            <img src="{{ url_for('static', filename='assets/img/about.jpg') }}" class="img-fluid" alt="">
+            <img src="https://i.imgur.com/dDdP6Ea.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Who are we.</h3>
+            <h3>About us.</h3>
             <p class="fst-italic">
-              We secure and make it easier to access yourmedical records
+              We at healee collect data from different groups of patients and analyze it to identify it in the next step using our AI, which will help doctors to identify the disease in the early stage.
             </p>
+			<p class="fst-italic">
+We record our data in a blockchain, which is safe and secure and not tampered with, and easy to access from anywhere. So this helps the decentralization of data            </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> secure.</li>
-              <li><i class="ri-check-double-line"></i> safe.</li>
-              <li><i class="ri-check-double-line"></i> Easy.</li>
+              <li><i class="ri-check-double-line"></i> User Data is secured in the hedera network, governed by the most trusted companies like google, Boeing, chainlink, and more.</li>
+              <li><i class="ri-check-double-line"></i> Your Data is safe with us and in the right hands.</li>
+              <li><i class="ri-check-double-line"></i> Using our platform is very easy. Users need to fill out the form, and it will be recorded safely in the blockchain.</li>
             </ul>
             <p>
-              Our projects helps you to keep track of your health.
-			  we help you to access your data anywhere by keeping it on blockchain
+              By using our project, it will be easy to keep track of your health and also helps others to identify what diseases they are suffering from. Also, we allow you to access your Data anywhere, anythime by keeping it in the blockchain.
             </p>
           </div>
         </div>
@@ -128,7 +129,117 @@
       </div>
     </section><!-- End About Section -->
 
+    <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
   
+          <div class="section-title">
+            <h2>Try it out</h2>
+            <p>Try it out</p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-8 mt-5 mt-lg-0">
+              <form action="/submit" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="gender" class="form-control" id="name" placeholder="Gender" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="age" class="form-control" id="name" placeholder="Age" required>
+                  </div>
+                </div>
+          <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="location" class="form-control" id="name" placeholder="Location" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="ethinicity" class="form-control" id="name" placeholder="Ethinicity" required>
+                  </div>
+                </div>
+          <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input list="smoke" name="smoke"class="form-control" id="name" placeholder="Do you smoke?" required>
+                    <datalist id="smoke">
+                      <option value="Yes">
+                      <option value="No">
+                    </datalist>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="prev_diseases" class="form-control" id="name" placeholder="Previous diseases" required>
+                  </div>
+                </div>
+          <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="symptom_1" class="form-control" id="name" placeholder="Symptom 1" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="symptom_2" class="form-control" id="name" placeholder="Symptom 2" required>
+                  </div>
+                </div>
+          <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="symptom_3" class="form-control" id="name" placeholder="Symptom 3" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="symptom_4" class="form-control" id="name" placeholder="Symptom 4" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="disease " id="subject" placeholder="Current disease diagnosis " required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Description" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">The form was submitted successfully. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Submit</button></div>
+              </form>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+
+      <section id="analysis" class="analysis">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Analysis</h2>
+            <p>Analyse the current data:</p>
+            
+          </div>
+
+          <div class="text-center"><button id="analysis-btn" onclick="analysisFunc()">Generate analysis</button></div>
+
+          <script>
+            function analysisFunc() {
+              // document.getElementById('analysis-btn').style.visibility = 'hidden';
+
+              console.log("analysis button clicked")
+
+              $.get("/analysis", {}).done(function(data) {
+                console.log(data)
+              });
+            }
+          </script>
+  
+        </div>
+      </section><!-- End Services Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -143,16 +254,16 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a >Easy TO use</a></h4>
-              <p>our platform is very easy to use and we give you best out of it</p>
+              <h4><a >Easy to use</a></h4>
+              <p>Our platform is very easy and intuitve to use.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a >safe and secure</a></h4>
-              <p>We keep your data safe and secure in HEdera BlockChain</p>
+              <h4><a >Safe and Secure</a></h4>
+              <p>We keep your data safe and secure utilizing Hedera BlockChain</p>
             </div>
           </div>
 
@@ -170,149 +281,7 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Call to Action</h3>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
- 
-    <!-- ======= Counts Section
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
-          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-              <div class="row">
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Counts Section --> 
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{{ url_for('static', filename='assets/img/testimonials/testimonials-1.jpg') }}" class="testimonial-img" alt="">
-                <h3>user catman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  we loved the service
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{{ url_for('static', filename='assets/img/testimonials/testimonials-2.jpg') }}" class="testimonial-img" alt="">
-                <h3>user sheepon</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-				  we loved the service
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{{ url_for('static', filename='assets/img/testimonials/testimonials-3.jpg') }}" class="testimonial-img" alt="">
-                <h3>user blahaj</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-				  we loved the service
-
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{{ url_for('static', filename='assets/img/testimonials/testimonials-4.jpg') }}" class="testimonial-img" alt="">
-                <h3>user girafee</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-				  we loved the service
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{{ url_for('static', filename='assets/img/testimonials/testimonials-5.jpg') }}" class="testimonial-img" alt="">
-                <h3>user elepnt</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-				  we loved the service
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
+  
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
@@ -332,7 +301,7 @@
               </div>
               <div class="member-info">
                 <h4>Ashish Malla</h4>
-                <span>Partner</span>
+                <span>WebDev Expert</span>
               </div>
             </div>
           </div>
@@ -344,7 +313,7 @@
               </div>
               <div class="member-info">
                 <h4>Yash Yadav</h4>
-                <span>Partner</span>
+                <span>Python Expert</span>
               </div>
             </div>
           </div>
@@ -355,8 +324,20 @@
                 <img src="https://media.discordapp.net/attachments/1051163066538151946/1051400831678808124/Screenshot_20221211_130005_LinkedIn.jpg" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>NISARG THAKKAR</h4>
-                <span>Partner</span>
+                <h4>Nisarg Thakkar</h4>
+                <span>Blockchain Expert</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="https://media.discordapp.net/attachments/1051163066538151946/1051444838698061844/image.png" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Alvin Philips</h4>
+                <span>Blockchain Expert</span>
               </div>
             </div>
           </div>
@@ -367,91 +348,7 @@
       </div>
     </section><!-- End Team Section -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Enter data</h2>
-          <p>Enter data</p>
-        </div>
-        <div class="row mt-5">
-          <div class="col-lg-4">
-          </div>
-          <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="/submit" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="gender" class="form-control" id="name" placeholder="Gender" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="age" class="form-control" id="name" placeholder="Age" required>
-                </div>
-              </div>
-			  <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="location" class="form-control" id="name" placeholder="Location" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="ethinicity" class="form-control" id="name" placeholder="Ethinicity" required>
-                </div>
-              </div>
-			  <div class="row">
-                <div class="col-md-6 form-group">
-                  <input list="smoke" name="smoke"class="form-control" id="name" placeholder="Do you smoke?" required>
-                  <datalist id="smoke">
-                    <option value="Yes">
-                    <option value="No">
-                  </datalist>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="prev_diseases" class="form-control" id="name" placeholder="Previous diseases" required>
-                </div>
-              </div>
-			  <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="symptom_1" class="form-control" id="name" placeholder="Symptom 1" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="symptom_2" class="form-control" id="name" placeholder="Symptom 2" required>
-                </div>
-              </div>
-			  <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="symptom_3" class="form-control" id="name" placeholder="Symptom 3" required>
-                </div>
-                <div class="col-md-6 form-group">
-                  <input type="text" name="symptom_4" class="form-control" id="name" placeholder="Symptom 4" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="disease " id="subject" placeholder="Current disease diagnosis " required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Description" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">The form was submitted successfully. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Submit</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
