@@ -1,10 +1,3 @@
-/**
-* Template Name: Gp - v4.9.1
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -416,7 +409,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("https://i.imgur.com/Ua24y8b.png") top center;
   background-size: cover;
   position: relative;
 }
@@ -720,7 +713,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/zNthJK3.png") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -1030,7 +1023,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("https://i.imgur.com/qS2msIV.png") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
