@@ -1,0 +1,20 @@
+{
+  "name": "healee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alvin Philips <alvinphilips257@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.19.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "prettier": "^2.8.1"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
